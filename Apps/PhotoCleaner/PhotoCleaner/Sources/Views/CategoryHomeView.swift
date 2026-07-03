@@ -52,7 +52,8 @@ struct CategoryHomeView: View {
             }
             .safeAreaInset(edge: .bottom) {
                 // 無料ユーザーにはバナー広告を表示（Pro で非表示）。
-                if !store.isPro {
+                // 起動引数 -hideAds が指定されている場合は非表示（スクリーンショット撮影用）。
+                if !store.isPro, !ProcessInfo.processInfo.arguments.contains("-hideAds") {
                     BannerAdView()
                 }
             }

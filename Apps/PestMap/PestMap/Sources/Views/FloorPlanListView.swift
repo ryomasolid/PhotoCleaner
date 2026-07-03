@@ -89,7 +89,10 @@ struct FloorPlanListView: View {
                 }
             }
             .safeAreaInset(edge: .bottom) {
-                BannerAdView()
+                // 起動引数 -hideAds 指定時は非表示（スクリーンショット撮影用）。
+                if !ProcessInfo.processInfo.arguments.contains("-hideAds") {
+                    BannerAdView()
+                }
             }
             .alert("新しい間取り", isPresented: $showingNewPlanAlert) {
                 TextField("名前（例: 1階キッチン）", text: $newPlanName)
