@@ -1,38 +1,64 @@
 {
-  "sourceLanguage": "ja",
-  "strings": {
-    "NSCameraUsageDescription": {
-      "localizations": {
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "間取り図を撮影して取り込むためにカメラを使用します。"
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Used to take photos of floor plans to import them."
+  "sourceLanguage" : "ja",
+  "strings" : {
+    "CFBundleDisplayName" : {
+      "comment" : "Bundle display name",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "PestMap"
           }
         }
       }
     },
-    "NSUserTrackingUsageDescription": {
-      "localizations": {
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "あなたに関連性の高い広告を表示するために使用します。許可しなくてもアプリの機能はご利用いただけます。"
+    "CFBundleName" : {
+      "comment" : "Bundle name",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "PestMap"
+          }
+        }
+      }
+    },
+    "NSCameraUsageDescription" : {
+      "comment" : "Privacy - Camera Usage Description",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Used to take photos of floor plans to import them."
           }
         },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Used to show ads that are more relevant to you. You can use the app fully even if you don’t allow this."
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "間取り図を撮影して取り込むためにカメラを使用します。"
+          }
+        }
+      }
+    },
+    "NSUserTrackingUsageDescription" : {
+      "comment" : "Privacy - Tracking Usage Description",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Used to show ads that are more relevant to you. You can use the app fully even if you don’t allow this."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "あなたに関連性の高い広告を表示するために使用します。許可しなくてもアプリの機能はご利用いただけます。"
           }
         }
       }
     }
   },
-  "version": "1.0"
+  "version" : "1.0"
 }
