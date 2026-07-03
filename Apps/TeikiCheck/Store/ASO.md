@@ -66,7 +66,9 @@
 4. **03_history** … 保存した区間の履歴＝実用性（`-demo -hideAds -startTab history`）
 5. **04_paywall** … Pro（広告非表示）紹介（`-demo -hideAds -showPaywall`）
 
-※ 6.5"/5.5" は任意。6.9" があれば提出可。iPad は非対応のため不要。
+※ 6.5"/5.5" は任意。6.9" があれば提出可。
+※ 本アプリは iPad 対応（Universal）のため、**13" iPad（2064×2752）も必須**。
+  → `Store/screenshots-ipad/` に同じ5枚を用意済み（同じ起動引数で撮影）。
 ※ IAP 審査用スクショには 04_paywall を流用可。
 
 ## メモ
