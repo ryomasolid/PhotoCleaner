@@ -47,9 +47,8 @@ let project = Project(
                     "CFBundleDisplayName": "定期チェック",
                     "CFBundleDevelopmentRegion": "ja",
                     "ITSAppUsesNonExemptEncryption": false,
-                    // AdMob アプリID。TODO: 本番リリース前に AdMob で登録した本番アプリIDへ差し替える。
-                    // 現状は Google 公式のテスト用アプリID（開発中の起動クラッシュを防ぐ）。
-                    "GADApplicationIdentifier": "ca-app-pub-3940256099942544~1458002511",
+                    // AdMob アプリID（本番）。
+                    "GADApplicationIdentifier": "ca-app-pub-6105029932689433~2706062104",
                     // 広告のトラッキング許可（ATT）ダイアログの説明文。
                     "NSUserTrackingUsageDescription": "あなたに関連性の高い広告を表示するために使用します。許可しなくてもアプリの機能はご利用いただけます。",
                     "SKAdNetworkItems": .array(

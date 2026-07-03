@@ -3,12 +3,14 @@ import SwiftUI
 import UIKit
 
 /// AdMob アダプティブ・アンカー・バナー（画面幅に最適化）。
-/// TODO: 本番リリース前に release 用ユニットIDを AdMob で発行した本番IDへ差し替える。
-///       現状は Google 公式のテスト用ユニットIDを使用している。
+/// 開発中（DEBUG）は Google のテストユニット、リリースは本番ユニットを使う。
 struct BannerAdView: View {
     private static var unitID: String {
-        // テスト用バナーユニット（開発・審査中の誤クリック対策）。
-        "ca-app-pub-3940256099942544/2934735716"
+        #if DEBUG
+        return "ca-app-pub-3940256099942544/2934735716"
+        #else
+        return "ca-app-pub-6105029932689433/3013982627"
+        #endif
     }
 
     private var adSize: GADAdSize {
