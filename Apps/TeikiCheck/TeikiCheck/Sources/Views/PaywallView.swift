@@ -29,17 +29,21 @@ struct PaywallView: View {
                         .font(.headline)
                         .foregroundStyle(.green)
                 } else {
+                    // スクショ用のデモ時は、商品未ロードでもサンプル価格を表示する。
+                    let ready = store.product != nil || Launch.isDemo
+                    let priceLabel = store.product != nil ? "\(store.priceText) で購入"
+                        : (Launch.isDemo ? "¥300 で購入" : "購入を準備中…")
                     Button {
                         Task { await store.purchase(); if store.isPro { dismiss() } }
                     } label: {
-                        Text(store.product == nil ? "購入を準備中…" : "\(store.priceText) で購入")
+                        Text(priceLabel)
                             .font(.headline)
                             .frame(maxWidth: .infinity)
                             .padding()
-                            .background(store.product == nil ? AnyShapeStyle(.gray) : AnyShapeStyle(.tint), in: RoundedRectangle(cornerRadius: 14))
+                            .background(ready ? AnyShapeStyle(.tint) : AnyShapeStyle(.gray), in: RoundedRectangle(cornerRadius: 14))
                             .foregroundStyle(.white)
                     }
-                    .disabled(store.product == nil)
+                    .disabled(!ready)
 
                     Button("購入を復元") {
                         Task { await store.restore(); if store.isPro { dismiss() } }

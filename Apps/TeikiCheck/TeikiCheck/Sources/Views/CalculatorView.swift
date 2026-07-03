@@ -64,6 +64,13 @@ struct CalculatorView: View {
                 }
             }
             .sheet(isPresented: $showPaywall) { PaywallView() }
+            .onAppear {
+                // デモ／スクショ用の起動引数を反映する。
+                if Launch.isDemo, input == TeikiInput() {
+                    input = Launch.demoInput
+                }
+                if Launch.showPaywall { showPaywall = true }
+            }
             .alert("この区間を保存", isPresented: $showSaveDialog) {
                 TextField("区間名（例：自宅 ⇔ 会社）", text: $saveName)
                 Button("保存") { save() }
@@ -205,7 +212,7 @@ struct CalculatorView: View {
     // MARK: - バナー広告
 
     @ViewBuilder private var bannerArea: some View {
-        if !store.isPro, !ProcessInfo.processInfo.arguments.contains("-hideAds") {
+        if !store.isPro, !Launch.hideAds {
             BannerAdView()
         }
     }

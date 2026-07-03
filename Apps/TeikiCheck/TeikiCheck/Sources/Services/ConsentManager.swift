@@ -12,6 +12,8 @@ final class ConsentManager {
 
     func start() {
         guard !started else { return }
+        // 広告非表示（スクショ撮影）時は同意・ATT フローを一切走らせない。
+        guard !Launch.hideAds else { return }
         started = true
 
         let parameters = UMPRequestParameters()
