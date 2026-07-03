@@ -46,6 +46,7 @@ let project = Project(
                     ],
                     "CFBundleDisplayName": "PhotoCleaner",
                     "CFBundleDevelopmentRegion": "ja",
+                    "ITSAppUsesNonExemptEncryption": false,
                     // 写真は完全オンデバイスで処理し、外部送信しない旨をユーザーに伝える。
                     "NSPhotoLibraryUsageDescription": "重複・類似した写真を端末内だけで検出し、削除候補として表示するために写真ライブラリにアクセスします。写真が端末外に送信されることはありません。",
                     // AdMob アプリID（本番）。
