@@ -24,7 +24,7 @@ let project = Project(
     settings: .settings(
         base: [
             // 自動署名と開発チームを固定し、tuist generate で署名設定が消えないようにする。
-            "DEVELOPMENT_TEAM": "8F626K46L8",
+            "DEVELOPMENT_TEAM": "ZP3T7MAT5U",
             "CODE_SIGN_STYLE": "Automatic",
             "SWIFT_EMIT_LOC_STRINGS": "YES",
         ]
