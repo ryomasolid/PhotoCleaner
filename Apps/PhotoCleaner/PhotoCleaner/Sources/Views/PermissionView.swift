@@ -45,7 +45,7 @@ struct PermissionView: View {
     private var actionButton: some View {
         switch status {
         case .notDetermined:
-            Button("写真へのアクセスを許可") {
+            Button("続ける") {
                 Task { await onRequest() }
             }
             .buttonStyle(.borderedProminent)

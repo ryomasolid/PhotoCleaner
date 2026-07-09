@@ -316,12 +316,12 @@
         }
       }
     },
-    "写真へのアクセスを許可" : {
+    "続ける" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Allow Photo Access"
+            "value" : "Continue"
           }
         }
       }
